@@ -5,6 +5,5 @@ pandas
 numpy
 seaborn
 gunicorn
-ast
 streamlit
-responses
+requests
