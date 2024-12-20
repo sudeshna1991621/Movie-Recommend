@@ -2,7 +2,7 @@ import pickle
 import streamlit as st
 import requests
 
-'''#https://drive.google.com/file/d/17NRVIJ6L0XCWto99e7hpP5Qn2EVuiILp/view?usp=sharing
+#https://drive.google.com/file/d/17NRVIJ6L0XCWto99e7hpP5Qn2EVuiILp/view?usp=sharing
 
 import gdown
 
@@ -32,7 +32,7 @@ def recommend(movie):
         recommended_movie_posters.append(fetch_poster(movie_id))
         recommended_movie_names.append(movies.iloc[i[0]].title)
 
-    return recommended_movie_names,recommended_movie_posters'''
+    return recommended_movie_names,recommended_movie_posters
 
 
 st.header('Movie Recommender System')
@@ -45,7 +45,7 @@ selected_movie = st.selectbox(
     movie_list
 )
 
-'''if st.button('Show Recommendation'):
+if st.button('Show Recommendation'):
     recommended_movie_names, recommended_movie_posters = recommend(selected_movie)
 
     # Display recommendations in a single row
