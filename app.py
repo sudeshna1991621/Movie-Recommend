@@ -2,6 +2,17 @@ import pickle
 import streamlit as st
 import requests
 
+#https://drive.google.com/file/d/17NRVIJ6L0XCWto99e7hpP5Qn2EVuiILp/view?usp=sharing
+
+import gdown
+
+# Replace with your Google Drive file ID
+file_id = '17NRVIJ6L0XCWto99e7hpP5Qn2EVuiILp'
+url = f'https://drive.google.com/uc?id={file_id}'
+
+# Download the file
+gdown.download(url, 'similarity.pkl', quiet=False)
+
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US".format(movie_id)
     data = requests.get(url)
@@ -34,7 +45,7 @@ selected_movie = st.selectbox(
     movie_list
 )
 
-if st.button('Show Recommendation'):
+'''if st.button('Show Recommendation'):
     recommended_movie_names, recommended_movie_posters = recommend(selected_movie)
 
     # Display recommendations in a single row
@@ -43,5 +54,5 @@ if st.button('Show Recommendation'):
     for i in range(5):
         with cols[i]:
             st.text(recommended_movie_names[i])  # Show movie name
-            st.image(recommended_movie_posters[i], use_column_width=True)  # Show movie poster
+            st.image(recommended_movie_posters[i],use_container_width=True)  # Show movie poster'''
 

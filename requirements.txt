@@ -7,3 +7,4 @@ seaborn
 gunicorn
 streamlit
 requests
+gdown
