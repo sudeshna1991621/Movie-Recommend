@@ -6,7 +6,12 @@
 4. [GitCLI](https://git-scm.com/docbbooks/en/v2/Getting-Started-The-Command-Line)
 
 Create a new Environment
-'''
 conda create -p venv python==3.9 -y
+This will create a virtual environment named venv with Python 3.9.
 
-'''
+Deployment
+The final deployed application is accessible via the following link:
+https://movie-recommend-1-i8ew.onrender.com/
+
+
+
